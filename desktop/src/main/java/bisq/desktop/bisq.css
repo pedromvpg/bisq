@@ -659,7 +659,6 @@ tree-table-view:focused {
 .nav-price-balance {
     -fx-background-color: -bs-color-gray-background;
     -fx-background-radius: 3;
-    -fx-effect: innershadow(gaussian, -bs-text-color-transparent, 3, 0, 0, 1);
     -fx-pref-height: 41;
     -fx-padding: 0 10 0 0;
 }
