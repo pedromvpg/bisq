@@ -642,9 +642,7 @@ tree-table-view:focused {
 }
 
 .top-navigation .separator:vertical .line {
-    -fx-border-color: transparent transparent transparent -bs-rd-nav-border-color;
-    -fx-border-width: 1;
-    -fx-border-insets: 0 0 0 1;
+    -fx-border-width: 0;
 }
 
 .nav-primary {
@@ -2120,4 +2118,3 @@ textfield */
     -fx-stroke: linear-gradient(to bottom, -bs-text-color-transparent, -bs-text-color-transparent-dark) !important;
     -fx-fill: -bs-background-color !important;
 }
-
