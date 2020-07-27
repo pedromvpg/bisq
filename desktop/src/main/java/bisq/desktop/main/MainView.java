@@ -328,13 +328,13 @@ public class MainView extends InitializableView<StackPane, MainViewModel>
         secondaryNav.getStyleClass().add("nav-secondary");
         HBox.setHgrow(secondaryNav, Priority.SOMETIMES);
 
-        secondaryNav.setAlignment(Pos.CENTER);
+        secondaryNav.setAlignment(Pos.CENTER_LEFT);
 
         HBox priceAndBalance = new HBox(marketPriceBox.second, getNavigationSeparator(), availableBalanceBox.second,
                 getNavigationSeparator(), reservedBalanceBox.second, getNavigationSeparator(), lockedBalanceBox.second);
         priceAndBalance.setMaxHeight(41);
 
-        priceAndBalance.setAlignment(Pos.CENTER);
+        priceAndBalance.setAlignment(Pos.CENTER_RIGHT);
         priceAndBalance.setSpacing(9);
         priceAndBalance.getStyleClass().add("nav-price-balance");
 
@@ -346,7 +346,7 @@ public class MainView extends InitializableView<StackPane, MainViewModel>
             setPadding(new Insets(0, 0, 0, 0));
             getStyleClass().add("top-navigation");
         }};
-        navPane.setAlignment(Pos.CENTER);
+        navPane.setAlignment(Pos.CENTER_LEFT);
 
         AnchorPane contentContainer = new AnchorPane() {{
             getStyleClass().add("content-pane");
