@@ -43,11 +43,11 @@ import bisq.desktop.util.DisplayUtils;
 import bisq.desktop.util.Transitions;
 
 import bisq.core.dao.monitoring.DaoStateMonitoringService;
-import bisq.common.BisqException;
 import bisq.core.locale.GlobalSettings;
 import bisq.core.locale.LanguageUtil;
 import bisq.core.locale.Res;
 
+import bisq.common.BisqException;
 import bisq.common.Timer;
 import bisq.common.UserThread;
 import bisq.common.app.Version;
@@ -319,7 +319,7 @@ public class MainView extends InitializableView<StackPane, MainViewModel>
         HBox primaryNav = new HBox(marketButton, getNavigationSeparator(), buyButton, getNavigationSeparator(),
                 sellButton, getNavigationSeparator(), portfolioButtonWithBadge, getNavigationSeparator(), fundsButton);
 
-        primaryNav.setAlignment(Pos.CENTER_LEFT);
+        primaryNav.setAlignment(Pos.CENTER);
         primaryNav.getStyleClass().add("nav-primary");
         HBox.setHgrow(primaryNav, Priority.SOMETIMES);
 
@@ -328,18 +328,18 @@ public class MainView extends InitializableView<StackPane, MainViewModel>
         secondaryNav.getStyleClass().add("nav-secondary");
         HBox.setHgrow(secondaryNav, Priority.SOMETIMES);
 
-        secondaryNav.setAlignment(Pos.CENTER_LEFT);
+        secondaryNav.setAlignment(Pos.CENTER);
 
         HBox priceAndBalance = new HBox(marketPriceBox.second, getNavigationSeparator(), availableBalanceBox.second,
                 getNavigationSeparator(), reservedBalanceBox.second, getNavigationSeparator(), lockedBalanceBox.second);
         priceAndBalance.setMaxHeight(41);
 
-        priceAndBalance.setAlignment(Pos.CENTER_RIGHT);
+        priceAndBalance.setAlignment(Pos.CENTER);
         priceAndBalance.setSpacing(9);
         priceAndBalance.getStyleClass().add("nav-price-balance");
 
         HBox navPane = new HBox(primaryNav, secondaryNav,
-                priceAndBalance) {{
+                getNavigationSpacer(), priceAndBalance) {{
             setLeftAnchor(this, 0d);
             setRightAnchor(this, 0d);
             setTopAnchor(this, 0d);
